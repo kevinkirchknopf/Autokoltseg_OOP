@@ -12,12 +12,17 @@ namespace Auto_koltsegek
         readonly private int Lokter_fog;
         readonly private int heng_szam;
         readonly private int max_ford;
+        
 
-        public benzines(int Lokter_fog, int heng_szam, int max_ford)
+        
+
+
+        public benzines(int Lokter_fog, int heng_szam, int max_ford, string rendszam)
         {
           this.Lokter_fog = Lokter_fog;
           this.heng_szam = heng_szam;
           this.max_ford = max_ford;
+          this.rendszam = rendszam;
         }
 
         public override int Efogyaszt()

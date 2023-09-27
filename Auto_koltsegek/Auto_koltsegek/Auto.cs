@@ -9,6 +9,13 @@ namespace Auto_koltsegek
 {
     abstract class Auto
     {
+        private string Rendszam;
+
+        public string rendszam
+        {
+            set { Rendszam = value; }
+            get { return Rendszam; }
+        }
         abstract public int KFB_kalk();
 
         abstract public int Efogyaszt();

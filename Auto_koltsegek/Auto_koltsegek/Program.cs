@@ -4,29 +4,37 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Jármű költség kalkultáor");
-            Console.WriteLine("Hány hónapra szeretnéd?");
-            int honap = int.Parse(Console.ReadLine());
-            Console.WriteLine("1. Benzin; 2. Dízel, 3. Elektromos");
-            int opcio = int.Parse(Console.ReadLine());
-            if(opcio == 1)
+            Console.WriteLine("1. Járműköltség kalkulátor");
+            Console.WriteLine("2. Flotta kezelése");
+            int opc1 = int.Parse(Console.ReadLine());
+            Console.Clear();
+            if(opc1 == 1 ) 
             {
-                benya();
+                Console.WriteLine("1. Benzin, 2. Dízel, 3. Elektromos");
+                int opc2 = int.Parse(Console.ReadLine());
+                Console.Clear();
+                if (opc2 == 1)
+                {
+                    benya();
+                }
+                if (opc2 == 2)
+                {
+                    dizel();
+                }
+                if (opc2 == 3)
+                {
+                    elektromos();
+                }
             }
-            if(opcio == 2)
+            if(opc1 == 2)
             {
-                dizel();
+                Flotta flotta = new Flotta();
+                
             }
-            if(opcio == 3)
-            {
-                elektromos();
-            }
-
-
-
+            
+            Console.ReadKey();
 
         }
-
 
         static void benya()
         {
@@ -74,6 +82,8 @@
             Console.WriteLine($"A karbantartási költség: {elek1.Karbtart_kalk()}");
             Console.WriteLine($"A KFB ára: {elek1.KFB_kalk()}");
             Console.WriteLine($"A fogyasztás: {elek1.Efogyaszt()}");
+
         }
+
     }
 }

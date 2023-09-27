@@ -12,10 +12,11 @@ namespace Auto_koltsegek
         readonly private int akku_kapac;
         readonly private int teljesitmeny;
 
-        public Elektromos(int akku_kapac, int teljesitmeny)
+        public Elektromos(int akku_kapac, int teljesitmeny,string rendszam)
         {
             this.akku_kapac = akku_kapac;
             this.teljesitmeny = teljesitmeny;
+            this.rendszam = rendszam;
         }
 
         public override int Efogyaszt()

@@ -12,10 +12,11 @@ namespace Auto_koltsegek
         private readonly int Heng_szam;
 
 
-        public Dizel(int Lokter_fog, int Heng_szam)
+        public Dizel(int Lokter_fog, int Heng_szam, string rendszam)
         {
             this.Lokter_fog = Lokter_fog;
             this.Heng_szam = Heng_szam;
+            this.rendszam = rendszam;
         }
 
         public override int Efogyaszt()
